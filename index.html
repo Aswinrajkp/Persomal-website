@@ -42,7 +42,7 @@
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
         <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-        <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>blog</span></a></li> -->
+        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>blog</span></a></li> 
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
       </ul>
     </nav>
@@ -109,7 +109,7 @@
 
         <div class="section-title">
           <h2>Skills</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>I'm also get the skills for web designing and trying learn flutter developing for making apps</p>
         </div>
 
         <div class="row skills-content">
@@ -136,6 +136,14 @@
                 <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
+
+            <div class="progress">
+              <span class="skill">BOOTSTRAP <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
           </div>
 
       </div>
@@ -147,7 +155,7 @@
 
         <div class="section-title">
           <h2>Resume</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p></p>
         </div>
 
         <div class="row">
@@ -201,7 +209,7 @@
 
         <div class="section-title">
           <h2>Portfolio</h2>
-          <p>I'm completed three static webpages using html and css and make a responsive website using bootstrap </p>
+          <p>I'm also complited four personal websites and one responsive websites using html,css,bootstrap,javascript its helps improve my skill in web designing  </p>
         </div>
 
         <div class="row">
@@ -219,7 +227,7 @@
               <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>web 1</h4>
-                <p>Web</p>
+                <p> static webpage of ajio</p>
               </div>
             </div>
           </div>
@@ -229,7 +237,7 @@
               <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Web 2</h4>
-                <p>Web</p>
+                <p> static page of ktm</p>
               </div>
             </div>
           </div>
@@ -239,7 +247,27 @@
               <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>web 3</h4>
-                <p>WEB</p>
+                <p>static page of netflix</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>web 3</h4>
+                <p>static webpage of iams </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>web 3</h4>
+                <p>responsive website of microsoft </p>
               </div>
             </div>
           </div>
@@ -253,7 +281,7 @@
     </section>
 
    
-    <!-- <section id="services" class="services">
+   <section id="services" class="services">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -285,7 +313,7 @@
                 <i class="bx bx-file"></i>
               </div>
               <h4><a href="">TECH NEWS  </a></h4>
-              <p>every day the world get changes and the tech field have developments every day so we want to know about our tech news and it gives an idea of new technology and its helps get infomationation were will we GO . tech news when early show the coming technology and other interesting things. and you know that you can advice others and help them in tech field        </p>
+              <p>every day the world get changes and the tech field have developments every day so we want to know about our tech news and it gives an idea of new technology and its helps get infomationation were will we GO . tech news when early show the coming technology and other interesting things. and you know that helps you to develop in your field and your whole life style         </p>
             </div>
           </div>
 
@@ -320,7 +348,7 @@
         </div>
 
       </div>
-    </section> -->
+    </section> 
 
 
     
@@ -365,27 +393,31 @@
             <form id="submit-form">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" oninput="this.value=this.value.replace(/[^A-Za-z-/ ]|^ /g,'')" maxlength="20" onkeyup="Per()"    id="name" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" oninput="this.value=this.value.replace(/[^A-Za-z-/ ]|^ /g,'')" maxlength="20" onkeyup="Per()"    id="name" placeholder="Your Name" onfocusout="checkname()">
                  
                   <p class="er" id="peer"></p>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" onkeyup="mal()" id="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" onkeyup="mal()" id="email" placeholder="Your Email" >
                   <p class="er" id="maal"></p>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="number" class="form-control" name="mobile" onkeyup="mob()" id="mobile" placeholder="Your phone number">
+                  <p class="er" id="mobb"></p>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" ></textarea>
               </div>
               <div class="my-3">
                
                 <div class="error-message"></div>
                 
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center" onclick="submit"><button type="submit">Send Message</button></div>
             </form>
 
           </div>
@@ -427,7 +459,8 @@
 
 
   <script>
-    $("#submit-form").submit((e)=>{
+ 
+  $("#submit-form").submit((e)=>{
         e.preventDefault()
         $.ajax({
             url:"https://script.google.com/macros/s/AKfycbxGHve1eW4_Kq1Y6_3KfyLB2xyuveWTqMeU-fjz-3I0kWaK92V8R6CroICCh43lqlQg/exec",
@@ -444,6 +477,7 @@
             }
         })
     })
+
 </script>
 </body>
 

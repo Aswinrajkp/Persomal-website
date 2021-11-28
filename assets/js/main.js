@@ -276,7 +276,7 @@ function Per(){
  }
  function mal(){
   var email = $('#email').val()
-  var pattern=/^[^]+@[^]+\.[a-z]{2,3}$/
+  var pattern=/^[^]+@[^]+\.[a-z]{2,3}$/ 
   if(email==""){
    $('#maal').html("Enter Valid Email");
      return false
@@ -290,3 +290,24 @@ function Per(){
  
   
  } 
+ function mob(){
+  var mobile = $('#mobile').val()
+  var pattern=/[0-9]*d/
+  if(mobile==""){
+   $('#mobb').html("Enter Valid number");
+     return false
+  }else if(mobile.match(pattern)){
+   $('#mobb').html("");
+     return true
+  }else{
+   $('#mobb').html("Enter Correct number");
+     return false
+  }
+ 
+  
+ } 
+ function submit(){
+   if(mobile==""){
+     alert("sumthing wrong");
+   }
+ }
