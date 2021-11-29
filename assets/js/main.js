@@ -268,9 +268,13 @@ function Per(){
   if(username==""){
    $('#peer').html("Enter The Name");
       return false
-  }else if(username.match(pattern)){
+      }else if(username.match(pattern)){
    $('#peer').html("");
      return true
+  }
+  four==0;
+  if(username==""){
+    four=1;
   }
   
  }

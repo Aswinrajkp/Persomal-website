@@ -393,7 +393,7 @@
             <form id="submit-form">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" oninput="this.value=this.value.replace(/[^A-Za-z-/ ]|^ /g,'')" maxlength="20" onkeyup="Per()"    id="name" placeholder="Your Name" onfocusout="checkname()">
+                  <input type="text" name="name" class="form-control" oninput="this.value=this.value.replace(/[^A-Za-z-/ ]|^ /g,'')" maxlength="20" onkeyup="Per()"    id="name" placeholder="Your Name" >
                  
                   <p class="er" id="peer"></p>
                 </div>
@@ -459,7 +459,7 @@
 
 
   <script>
- 
+ if(four==1){
   $("#submit-form").submit((e)=>{
         e.preventDefault()
         $.ajax({
@@ -477,6 +477,21 @@
             }
         })
     })
+  }else{
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbxGHve1eW4_Kq1Y6_3KfyLB2xyuveWTqMeU-fjz-3I0kWaK92V8R6CroICCh43lqlQg/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            error:function (err){
+                alert("Something Error")
+            }
+            })
+          })
+        }
+        
+  
 
 </script>
 </body>
