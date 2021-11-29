@@ -271,11 +271,10 @@ function Per(){
       }else if(username.match(pattern)){
    $('#peer').html("");
      return true
+    
   }
-  four==0;
-  if(username==""){
-    four=1;
-  }
+  
+  
   
  }
  function mal(){
@@ -290,6 +289,7 @@ function Per(){
   }else{
    $('#maal').html("Enter Correct Email");
      return false
+     
   }
  
   
@@ -306,12 +306,15 @@ function Per(){
   }else{
    $('#mobb').html("Enter Correct number");
      return false
+     
   }
- 
-  
  } 
- function submit(){
-   if(mobile==""){
-     alert("sumthing wrong");
-   }
- }
+
+
+  function submitFun(){
+     if(document.getElementById('email').value !=''){
+
+     }else{
+       alert("somthign wrong")
+     }
+  }
