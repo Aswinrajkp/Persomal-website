@@ -324,12 +324,13 @@ function Per(){
     three=1
    $('#mobb').html("");
      return true
-  }else{
-   $('#mobb').html("Enter Correct number");
-   three=0
-     return false
-     
   }
+  // else{
+  //  $('#mobb').html("Enter Correct number");
+  //  three=0
+  //    return false
+     
+  // }
  } 
 
 
