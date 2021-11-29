@@ -260,18 +260,27 @@
       mirror: false
     })
   });
-
+        
 })()
+
+
+
+var one=0,two=0,three=0
+
 function Per(){
   var username = $('#name').val()
   var pattern=/^[a-zA-Z-()]+(\s+[-a-zA-Z- ()]+)*$/
+  
   if(username==""){
    $('#peer').html("Enter The Name");
+      one=0
       return false
       }else if(username.match(pattern)){
+        one=1
+
    $('#peer').html("");
      return true
-    
+   
   }
   
   
@@ -282,13 +291,18 @@ function Per(){
   var pattern=/^[^]+@[^]+\.[a-z]{2,3}$/ 
   if(email==""){
    $('#maal').html("Enter Valid Email");
+   two=0
      return false
+
   }else if(email.match(pattern)){
    $('#maal').html("");
+   two=1
      return true
   }else{
    $('#maal').html("Enter Correct Email");
+    two=1
      return false
+     
      
   }
  
@@ -296,25 +310,34 @@ function Per(){
  } 
  function mob(){
   var mobile = $('#mobile').val()
-  var pattern=/[0-9]*d/
+  var pattern=/^\d*(?:\.\d{1,2})?$/
   if(mobile==""){
    $('#mobb').html("Enter Valid number");
+   three=0
      return false
-  }else if(mobile.match(pattern)){
+  }else if(mobile.length<10){
+    $('#mobb').html("Enter 10 digit number");
+    three=0
+    return false
+  }
+  else if(mobile.match(pattern)){
+    three=1
    $('#mobb').html("");
      return true
   }else{
    $('#mobb').html("Enter Correct number");
+   three=0
      return false
      
   }
  } 
 
 
-  function submitFun(){
-     if(document.getElementById('email').value !=''){
-
-     }else{
-       alert("somthign wrong")
-     }
-  }
+  // function submitFun(){
+  //    if(document.getElementById('email').value !=''){
+  //       return true
+  //     }else{
+  //     alert("somthign wrong")
+  //      return false
+  //     }
+  // }
