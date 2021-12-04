@@ -355,7 +355,9 @@ $("#submit-form").submit((e) => {
   Name()
   Email()
   Num()
-  if (count == 1) {
+  Subject()
+  Messege()
+  if (count == 5) {
     $.ajax({
       url: "https://script.google.com/macros/s/AKfycbxGHve1eW4_Kq1Y6_3KfyLB2xyuveWTqMeU-fjz-3I0kWaK92V8R6CroICCh43lqlQg/exec",
       data: $("#submit-form").serialize(),
@@ -373,8 +375,14 @@ $("#submit-form").submit((e) => {
 
 var username = document.getElementById("name");
 var peer = document.getElementById("peer");
+var maal = document.getElementById("maal")
 var email = document.getElementById("email");
 var number = document.getElementById("mobile");
+var mobb = document.getElementById('mobb')
+var subject = document.getElementById('subject')
+var sub = document.getElementById("sub")
+var mes = document.getElementById("mes")
+var messege = document.getElementById("MESSEGE")
 var nameReg = /^[a-zA-Z\s]*$/;
 var emailReg = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 var numberReg = /^\d+$/;
@@ -393,26 +401,55 @@ function Name() {
   }
 }
 function Email() {
-  if (email.value.trim() == "") {
-    peer.innerHTML = "fill  this field";
-  } else if (emailReg.test(email.value) == false) {
-    peer.innerHTML = "enter correct email";
+  if (email.value == "") {
+    maal.innerHTML = "fill  this field";
+  } else if(email.value.trim() == ""){
+    maal.innerHTML = "space not allowded";
+  }
+  else if (emailReg.test(email.value) == false) {
+    maal.innerHTML = "enter correct email";
   } else {
-       errDiv[1].innerHTML = "";
+       maal.innerHTML = "";
        count += 1;
   }
 }
 function Num() {
-  if (number.value.trim() == "") {
-    peer.innerHTML = "fill  this field";
-  } else if (numberReg.test(number.value) == false) {
-       peer.innerHTML = "only numbers are allowded";
+  if (number.value == "") {
+    mobb.innerHTML = "fill  this field";
+  }else if (number.value.trim() == ""){
+    mobb.innerHTML = "space not allowded"
+  }else if (numberReg.test(number.value) == false) {
+    mobb.innerHTML = "enter valkid number";
   } else if (number.value.trim().length > 10) {
-    peer.innerHTML = "max legth is 10 digit";
+    mobb.innerHTML = "maximun length is 10";
   } else if (number.value.trim().length < 10) {
-    peer.innerHTML = "min legth is 10 digit";
+    mobb.innerHTML = "min legth is 10 digit";
   } else {
-    peer.innerHTML = "";
+    mobb.innerHTML = "";
+    count += 1
+  }
+}
+
+function Subject() {
+  if (subject.value == "") {
+    sub.innerHTML = "fill this feild";
+  } else if (subject.value.trim() == ""){
+    sub.innerHTML = 'space not allowded'
+  }else {
+       sub.innerHTML = "";
+       count += 1
+  }
+}
+
+function Messege() {
+  if (messege.value == "") {
+       mes.innerHTML = "fill this field"
+  }else if(messege.value.trim() == ""){
+    mes.innerHTML = "space not allowded"
+  }
+   else {
+       mes.innerHTML = "";
+       count += 1
   }
 }
   
