@@ -353,6 +353,8 @@ $("#submit-form").submit((e) => {
    
   count = 0
   Name()
+  Email()
+  Num()
   if (count == 1) {
     $.ajax({
       url: "https://script.google.com/macros/s/AKfycbxGHve1eW4_Kq1Y6_3KfyLB2xyuveWTqMeU-fjz-3I0kWaK92V8R6CroICCh43lqlQg/exec",
@@ -371,7 +373,11 @@ $("#submit-form").submit((e) => {
 
 var username = document.getElementById("name");
 var peer = document.getElementById("peer");
+var email = document.getElementById("email");
+var number = document.getElementById("mobile");
 var nameReg = /^[a-zA-Z\s]*$/;
+var emailReg = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+var numberReg = /^\d+$/;
 var count = 0
 
 function Name() {
@@ -386,3 +392,28 @@ function Name() {
     count += 1
   }
 }
+function Email() {
+  if (email.value.trim() == "") {
+    peer.innerHTML = "fill  this field";
+  } else if (emailReg.test(email.value) == false) {
+    peer.innerHTML = "enter correct email";
+  } else {
+       errDiv[1].innerHTML = "";
+       count += 1;
+  }
+}
+function Num() {
+  if (number.value.trim() == "") {
+    peer.innerHTML = "fill  this field";
+  } else if (numberReg.test(number.value) == false) {
+       peer.innerHTML = "only numbers are allowded";
+  } else if (number.value.trim().length > 10) {
+    peer.innerHTML = "max legth is 10 digit";
+  } else if (number.value.trim().length < 10) {
+    peer.innerHTML = "min legth is 10 digit";
+  } else {
+    peer.innerHTML = "";
+  }
+}
+  
+
